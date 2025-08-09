@@ -123,7 +123,7 @@ class fStepPGD(fStep):
         """
         if not self.g_first:
             grad = cur_params["stepsize"] * cur_data_fidelity.grad(x, y, physics)
-            print(cur_params["stepsize"].device)
+            print(cur_params["stepsize"].device, cur_data_fidelity.grad(x, y, physics).device, '+++')
             quit()
             return x - grad
         else:
