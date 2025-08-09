@@ -50,7 +50,6 @@ class fStepHQS(fStep):
         :param torch.Tensor y: Input data.
         :param deepinv.physics.Physics physics: Instance of the physics modeling the data-fidelity term.
         """
-        print(cur_params["stepsize"].device)
         return cur_data_fidelity.prox(
             x, y, physics, gamma=cur_params["stepsize"], *args, **kwargs
         )

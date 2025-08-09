@@ -275,7 +275,6 @@ class L2(DataFidelity):
         :param float gamma: stepsize of the proximity operator.
         :return: (:class:`torch.Tensor`) proximity operator :math:`\operatorname{prox}_{\gamma \datafidname}(x)`.
         """
-        print(type(self.norm), type(gamma))
         return physics.prox_l2(x, y, self.norm * gamma)
 
 
